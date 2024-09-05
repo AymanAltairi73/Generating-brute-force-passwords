@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="./style.css" />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div class="generator">
+      <h1 class="title">Generate the password</h1>
+
+      <div class="password-container">
+        <button class="copy-btn">
+          <i class="fas fa-clipboard"></i>
+        </button>
+
+        <p class="password"></p>
+      </div>
+
+      <form class="form">
+        <div class="form-group">
+          <input type="number" id="length" min="5" max="20" value="10" />
+          <label for="length">Long password</label>
+        </div>
+
+        <div class="form-group custom-checkbox">
+          <input type="checkbox" id="capital" data-type="capital" />
+          <label for="capital">Include the capital letters</label>
+        </div>
+
+        <div class="form-group custom-checkbox">
+          <input type="checkbox" id="small" data-type="small" />
+          <label for="small">Include the small letters </label>
+        </div>
+
+        <div class="form-group custom-checkbox">
+          <input type="checkbox" id="number" data-type="number" />
+          <label for="number">Include numbers</label>
+        </div>
+
+        <div class="form-group custom-checkbox">
+          <input type="checkbox" id="sign" data-type="sign" />
+          <label for="sign">Include symbles</label>
+        </div>
+
+        <button type="submit" class="generate-btn">Generate</button>
+      </form>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+:root {
+  --blue: #37373b;
+  --dark-blue: #171f69;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "BYekan";
+  src: url("./fonts/Yekan.ttf");
+}
+
+body {
+  font-family: "BYekan";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.generator {
+  background-color: var(--blue);
+  color: #fff;
+  padding: 1rem;
+  width: 90%;
+  max-width: 400px;
+}
+
+.title {
+  text-align: center;
+  margin: 0.5rem 0 1rem;
+}
+
+.password-container {
+  background-color: var(--dark-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.copy-btn {
+  background-color: var(--blue);
+  color: #fff;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.copy-btn:active {
+  transform: scale(0.95);
+}
+
+.password {
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 1px;
+}
+
+.form .form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.85rem 0;
+  position: relative;
+}
+
+.form label {
+  cursor: pointer;
+}
+
+.form input[type="number"] {
+  width: 50px;
+  font-family: "BYekan";
+  direction: rtl;
+}
+
+.form-group.custom-checkbox label::before,
+.form-group.custom-checkbox label::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.form-group.custom-checkbox label::after {
+  background-color: var(--dark-blue);
+  transform: translateY(-50%) scale(0.65);
+  opacity: 0;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + label::after {
+  opacity: 1;
+}
+
+.generate-btn {
+  width: 100%;
+  font-family: "BYekan";
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  background-color: var(--dark-blue);
+  color: #fff;
+}
